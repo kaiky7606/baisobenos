@@ -1,0 +1,39 @@
+body{
+    background-image: url("https://capinaremos.com/wp-content/uploads/sites/2/2019/05/funny-corgis1.jpg");
+    background-size: auto 110vh;
+    font-family: Arial;
+    height: 100vh;
+}
+
+.menu{
+    background-color: crimson;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li{
+    ccc none;
+}
+
+a{
+    color: cyan;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.site-title{
+    text-align: center;
+    color: springgreen;
+}
+
+.site-subtitle{
+    text-align: center;
+    color: springgreen;
+    font-style:oblique ;
+}
