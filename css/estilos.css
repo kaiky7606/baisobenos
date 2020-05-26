@@ -1,12 +1,75 @@
+/* soft reset do css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    background-image: url("https://capinaremos.com/wp-content/uploads/sites/2/2019/05/funny-corgis1.jpg");
-    background-size: auto 110vh;
-    font-family: Arial;
+    background-image: url(https://media.giphy.com/media/WoD6JZnwap6s8/giphy.gif);
+    background-size: auto 130vh;
+    font-family: 'Righteous', cursive;
     height: 100vh;
+    font-size: 18px;
+    
+}
+/* se a tela tiver pelo menos 400px vai carregar estes estilos*/
+@media (min-width: 400px) {
+    body{
+        font-size: 21px;
+        }
+}
+
+/* breakpoint*/
+@media (min-width: 600px) {
+    body{
+        font-size: 30px;
+    }
+}
+
+/* breakpoint*/
+@media (min-width: 1200px) {
+     body{
+         font-size: 40px;
+    }
+ }
+
+ .contato h2{
+    font-family: 'Righteous', cursive;
+    color: springgreen;
+    margin-bottom: 2em;
+    font-size: 2em;
+    text-align: center;
+ }
+
+ .contato .icons{
+    text-align: center;
+ } 
+
+ .contato a{
+    font-size: 8em;
+    transition:  text-shadow 0.5s;
+}
+
+.contato a:active, 
+.contato a:hover{
+     text-decoration: none;
+     text-shadow: 0px 0px 100px springgreen;
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu{
-    background-color: crimson;
+    background-color: none;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
 }
 
 .menu ul{
@@ -15,8 +78,21 @@ body{
 }
 
 .menu li{
-    ccc none;
+    text-decoration: none;
+    font-size: 1.2em;
 }
+
+.menu a{
+display: block;
+padding: 20px 20px;
+transition:  text-shadow 1s;
+}
+
+.menu a:active,
+.menu a:hover {
+
+text-shadow: 0px 0px 100px springgreen;
+    }
 
 a{
     color: cyan;
@@ -27,13 +103,150 @@ a:hover{
     text-decoration: underline;
 }
 
+.titulo{
+   
+    opacity: 0;
+
+    animation: linear 4s animacaotitulo forwards;
+}
+
+@keyframes animacaotitulo{
+    0%{
+
+    }
+
+    100%{
+      
+    opacity: 1;  
+    }
+}
+
 .site-title{
     text-align: center;
     color: springgreen;
+}
+
+.site-title{
+    font-size: 2.5em;
+    font-family: 'Sedgwick Ave Display', cursive;
+   
+}
+
+@media (min-width: 400px){
+    .site-title{
+        font-size: 3em;
+    }
 }
 
 .site-subtitle{
     text-align: center;
     color: springgreen;
     font-style:oblique ;
+    font-family: 'Righteous', cursive;
+    line-height: 8vh;
+}
+
+.sobre,
+.contato, 
+.portifolio{
+    padding: 2em;
+    color: springgreen;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10em;
+}
+
+@media (min-width: 1200px){
+    .container{
+        max-width: 1200px;
+    }
+}
+
+.sobre p{
+    color: white;
+    margin-bottom: 1.3em;
+    text-indent: 1.2em;
+    text-align: justify;
+}
+
+.portifolio .grid{
+    display: grid;
+    gap: 2em;
+}
+
+@media (min-width: 560px) {
+    .portifolio .grid{
+    grid-template-columns: 240px 240px;
+    }
+}
+
+@media (min-width: 880px) {
+    .portifolio .grid{
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+    align-content: center;
+    height: calc(200vh - 48px - 6em);
+    }
+}
+
+.sobre h2{
+    font-family: 'Righteous', cursive;
+    color: springgreen;
+    margin-bottom: 1em;
+    font-size: 2em;
+    text-align: center;
+}
+
+.portifolio h2{
+    font-family: 'Righteous', cursive;
+    color: springgreen;
+    margin-bottom: 3em;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.portifolio figure{
+    text-align: center;
+    
+}
+
+.img-portifolio{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 1s;
+    margin-bottom: 1em;
+}
+
+.img-portifolio:active,
+.img-portifolio:hover{
+    transform: scale(1.4);
+}
+
+@media( min-width: 880px ) {
+    .img-portifolio{
+        height: 240px;
+        width: 310px;
+        object-position: center;
+    }
+}
+
+.centro{
+    margin-left: 15em;
+    margin-bottom: 2em;
+    
+}
+
+.sobre .avatar{
+    float: left;
+    margin-right: 1em;
+    border-radius: 5%;
+}
+
+.avatar{
+    height: 400px;
+    width: 400px;
+    
 }
